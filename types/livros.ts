@@ -2,11 +2,13 @@ export type StatusLeitura = 'quero_ler' | 'lendo' | 'lido';
 
 export interface Livro {
   id?: string;
-  uid: string; // Obrigatório para o isolamento de usuários (Requisito 8)
+  uid: string;
   titulo: string;
   autor: string;
   genero: string;
   status: StatusLeitura;
-  notaPessoal?: number; // 1 a 5
-  dataConclusao?: string | null; // Regra de negócio
+  notaPessoal?: number;
+  dataConclusao?: string | null;
+  paginaAtual?: number;
+  totalPaginas?: number;
 }
